@@ -3,14 +3,14 @@
 #Country
 
 def display_menu():
-    print("Command Menu")
+    print("COMMAND MENU")
     print("view --> View country name")
     print("add --> Add a country")
     print("delete --> Delete a country")
     print("exit --> Exit the program")
     print()
     
-def display_codes(countries):
+def display_codes(countries):   
     codes = list(countries.keys())
     codes.sort()
     codes_line = "Country codes: "
@@ -19,7 +19,7 @@ def display_codes(countries):
     print(codes_line)
     
 def view(countries):
-    display_codes("Enter country codes:  ")
+    display_codes("Enter country code:  ")
     code = code.upper()
     if code in countries:
         name = countries[code]
@@ -32,7 +32,7 @@ def add(countries):
     code = code.upper()
     if code in countries:
         name = countries[code]
-        print(f"{name} is already using that code")
+        print(f"{name} is already using that code. \n")
         
     else:
         name = input("Enter country name: ")
@@ -45,7 +45,7 @@ def delete(countries):
     code = code.upper()
     if code in countries:
         name = countries.pop(code)
-        print(f"{name} was deleted")
+        print(f"{name} was deleted. \n")
     else:
         print("There is no country with that code. \n")
         
